@@ -1,0 +1,95 @@
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.Header {
+  padding: 3vh 0 0 0;
+  text-align: center;
+  font-size: 2.2rem;
+}
+.ProjectAligner {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  height: 100%;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+}
+.ProjectContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly
+}
+.Project {
+  width: 27vw;
+  margin: 5px
+}
+.ProjectImage {
+  width: 100%
+}
+.ProjectTitle {
+  font-size: 6.5vh;
+  margin: 0
+}
+.ProjectText {
+  font-size: 18px;
+  line-height: 24px;
+}
+/*===MEDIA QUERIES FROM https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ =======*/
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+  .container {
+    overflow-y: scroll
+  }
+  .ProjectContainer {
+    height: 80%;
+  }
+  .Project {
+    width: 30%
+  }
+  .ProjectTitle {
+    font-size: 2rem
+  }
+  .ProjectText {
+    font-size: 1rem
+  }
+}
+/* ================= MOBILE ================*/
+@media screen and (max-width: 740px){
+  .container {
+    overflow-y: scroll
+  }
+  .Header {
+    font-size: 1.5rem
+  }
+  .ProjectAligner{
+    height: unset;
+    width: unset
+  }
+  .ProjectContainer {
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+  }
+  .Project{
+    padding: 60px 0px;
+    width: 100%
+  }
+  .ProjectText {
+    font-size: 18px
+  }
+  .Section {
+    height: unset
+  }
+}
+/* a weird breakpoint for the project aligner when the browser height is a little smaller  */
+@media screen and (max-height: 709px){
+  .ProjectAligner{
+    height: auto;
+  }
+}

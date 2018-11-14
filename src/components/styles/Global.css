@@ -1,0 +1,126 @@
+/* =====================GRID OVERLAY=====================*/
+/* :global(:root) {
+  --offset: 2rem;
+  --max_width: 100vw;
+  --columns: 8;
+  --gutter: 1px;
+  --color: hsla(204, 80%, 72%, 0.25);
+}
+
+:global(:root) {
+  --repeating-width: calc(100% / var(--columns));
+  --column-width: calc((100% / var(--columns)) - var(--gutter));
+  --background-width: calc(100% + var(--gutter));
+  --background-columns: repeating-linear-gradient(
+    to right,
+    var(--color),
+    var(--color) var(--column-width),
+    transparent var(--column-width),
+    transparent var(--repeating-width)
+  );
+}
+
+:global(html) {
+  position: relative;
+}
+
+:global(html::before) {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100% - (2 * var(--offset)));
+  max-width: var(--max_width);
+  min-height: 100vh;
+  content: '';
+  background-image: var(--background-columns);  
+  background-size: var(--background-width) 100%;
+  z-index: 1000;
+  pointer-events: none;
+} */
+/* ============================================================ */
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  -ms-overflow-style:none;
+}
+ul {
+  list-style: none;
+  padding: 0
+}
+h1 {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #FFF
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+/*===================== FONTS =====================*/
+@font-face {
+  font-family: 'Plaak';
+  src: url('../../assets/fonts/Plaak3Trial-43-Bold.otf');
+}
+@font-face {
+  font-family: 'MarkProBook';
+  src: url('../../assets/fonts/MarkPro_book.otf');
+}
+:global(.Plaak) {
+  font-family: 'Plaak';
+  color: #FFF;
+}
+:global(.MarkProBook) {
+  font-family: 'MarkProBook';
+  color: #FFF;
+}
+/*===================== GLOBAL SECTION STYLING =====================*/
+:global(.Section) {
+  height: 100vh;
+}
+/*===================== GLOBAL BUTTON STYLING =====================*/
+:global(.Button) {
+  background-color: transparent;
+  font-size: 1.8rem;
+  padding: 12px 32px;
+  border: 1px solid #FFF;
+  display: block;
+  margin: auto;
+  letter-spacing: 1.3px;
+}
+/*===================== GLOBAL LOGO STYLING =====================*/
+:global(.Logo){
+  display: block;
+  height: 170px;
+  margin: 0 auto;
+}
+/* ========BACKGROUND COLOR SCROLLING COLORS========= */
+:global(.blue){
+  background: rgba(20,122,249,1);
+}
+:global(.black){
+  background: #141414
+}
+:global(.backgroundTransition){
+  transition: all 1s ease
+}
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+  :global(.Logo){
+    height: 240px
+    }
+  }
+/* ================= MOBILE ================*/
+@media screen and (max-width: 740px){
+  :global(.Logo){
+    height: 113px;
+  }
+}

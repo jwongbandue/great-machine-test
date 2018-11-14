@@ -1,0 +1,51 @@
+.flex{
+  display: flex;
+  width: 100%;
+}
+.logo {
+  background-image: url('../../assets/logos/GreatMachine.svg');
+  width: 50%;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+.textContainer {
+  background-size: 50%;
+  width: 50%;
+  display: flex;
+  font-size: 2.5rem;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.textContainer * {
+  margin: auto;
+}
+
+/*===MEDIA QUERIES FROM https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ =======*/
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+  .textContainer {
+    font-size: 2rem
+  }
+}
+/* ================= MOBILE ================*/
+@media screen and (max-width: 740px){
+  .textContainer {
+    font-size: 1.5rem;
+  }
+  .flex{
+    width: unset;
+    flex-direction: column;
+  }
+  .textContainer{
+    height: 50vh;
+    width: 100vw;
+  }
+  .logo {
+    width: 100vw;
+    height: 50vh
+  }
+}

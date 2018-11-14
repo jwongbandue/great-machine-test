@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+.contentContainer {
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  height: 60%;
+  margin-top: 10%;
+}
+.contentText {
+  font-size: 2rem;
+  line-height: 3rem
+}
+.design {
+  max-height: 80%;
+}
+.footer {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  justify-content: space-between;
+}
+.privacyPolicy{
+  text-align: right
+}
+
+/*===MEDIA QUERIES FROM https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ =======*/
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+  .contentContainer {
+    flex-direction: column;
+    margin-top: 20%
+  }
+  .design {
+    height: 50%;
+  }
+}
+/* ================= MOBILE ================*/
+@media screen and (max-width: 740px){
+  .contentContainer {
+    flex-direction: column;
+    margin-top: 20%
+  }
+  .design {
+    height: 270px
+  }
+  .contentText {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    text-align: center
+  }
+  .logo {
+    grid-column: 3;
+    grid-row: 1/ span 2
+  }
+  .footer {
+    font-size: 11px
+  }
+  .contactInfo, .privacyPolicy{
+    grid-column: 1/span 2;
+    text-align: left
+  }
+}

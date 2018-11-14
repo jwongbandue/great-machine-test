@@ -1,0 +1,49 @@
+.container, .background {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: auto
+}
+.container {
+  position: absolute;
+  z-index: 2;
+}
+.close{
+  float: right;
+  margin: 2%;
+  height: 30px;
+  width: 30px
+}
+.background {
+  background: #000;
+  opacity: 0.8;
+}
+.video {
+  transform: translate(-50%,-50%);
+  z-index: 11000;
+  top: 50%;
+  left: 50%;
+  width: 69.6vw;
+  height: 38.8vw;
+  position: absolute;
+  border: none;
+}
+
+video, iframe, .video {
+  transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+      width: 69.6vw;
+      height: 38.8vw;
+  }
+/*===MEDIA QUERIES FROM https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ =======*/
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+
+}
+/* ================= MOBILE ================*/
+@media screen and (max-width: 740px){
+
+}

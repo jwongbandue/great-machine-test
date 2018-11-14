@@ -1,0 +1,38 @@
+/* ========BACKGROUND AI========= */
+:global(.onLanding){
+  background-image: url('../../assets/logos/AI-blue.png');
+  background-repeat: no-repeat;
+  background-position: 85% center;
+  background-size: 25%;
+}
+:global(.onAbout){
+  background-image: url('../../assets/logos/AI-black.png');
+  background-repeat: no-repeat;
+  background-position: 85% center;
+  background-size: 25%;
+}
+:global(.hideAI){
+  background-repeat: no-repeat;
+  background-position: 85% center;
+  background-size: 25%;
+}
+/*===MEDIA QUERIES FROM https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ =======*/
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+  .textContainer {
+    font-size: 2rem
+  }
+}
+/* ================= MOBILE ================*/
+@media screen and (max-width: 740px){
+  .textContainer {
+    font-size: 1.5rem
+  }
+  :global(.onLanding) {
+    background-position: 50% 77%;
+  }
+  :global(.onAbout){
+    background-size: 50%;
+    background-position: center;
+  }
+}

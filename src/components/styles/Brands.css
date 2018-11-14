@@ -1,0 +1,95 @@
+.container {
+  width: 100%;
+  justify-content: space-around;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.aligner {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+.header {
+  text-align: center;
+  padding: 3vh 0 0 0;
+  font-size: 2.2rem;
+}
+.logoContainer {
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  height: 40%;
+  grid-template-columns: [first] 25% [second] 25% [third] 25% [fourth] 25% [end];
+  width: 67%;
+  margin: 0 auto;
+}
+.VW, .TacoBell, .Target {
+  margin: auto;
+}
+.VW {
+  width: 50%;
+}
+.TacoBell {
+  height: 50%;
+  grid-column: 2/span 2;
+}
+.Target {
+  width: 50%;
+}
+.ABinBev {
+  grid-column: 1/span 2;
+  width: 70%;
+  margin: auto
+}
+.Adidas {
+  grid-column: 3/span 2;
+  width: 70%;
+  margin: auto
+}
+.button {
+  margin: 8% auto 0 auto
+}
+/*===MEDIA QUERIES FROM https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ =======*/
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+  .logoRowOne {
+    height: 40%;
+  }
+  .ATT {
+    width: 110%
+  }
+  .ABinBev, .Adidas {
+    width: 75%;
+  }
+}
+/* ================= MOBILE ================*/
+@media screen and (max-width: 740px){
+  .header {
+    font-size: 1.3rem
+  }
+  .aligner {
+    height: 100vh;
+  }
+  .logoContainer {
+    grid-template-columns: [first] 50% [second] 50% [end];
+    grid-template-rows: [one] 30% [two] 30% [three] 30% [end];
+    grid-column-gap: 5%;
+    grid-row-gap: 10%;
+    padding: 15% 0px;
+  }
+  .TacoBell {
+    height: 100%;
+  }
+  .ABinBev {
+    grid-column: 1/span2;
+    width: 50%;
+  }
+  .Adidas {
+    grid-column: 2;
+    grid-row: 2;
+    width: 100%;
+  }
+}

@@ -1,0 +1,102 @@
+a {
+  white-space: nowrap
+}
+.container {
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+  display: flex;
+}
+.listItem {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: "white";
+}
+:global(.showLogo){
+  opacity: 1
+}
+:global(.hideLogo){
+  opacity: 0;
+  visibility: hidden;
+}
+:global(.LogoTransition){
+  transition: all .5s ease
+}
+:global(.burgerMenu){
+  cursor: pointer;
+  padding: 2%;
+}
+:global(.burger1) {
+  width: 50px;
+  position: absolute;
+  background: rgba(255,255,255,1);
+  height: 5px;
+  top: 45px
+}
+:global(.burger4) {
+  width: 50px;
+  position: absolute;
+  background: rgba(255,255,255,1);
+  height: 5px;
+  top: 45px
+}
+:global(.burger2){
+  width: 50px;
+  position: absolute;
+  background: rgba(255,255,255,0);
+  height: 5px;
+  top: 0px
+}
+:global(.burger3) {
+  width: 50px;
+  position: absolute;
+  background: rgba(255,255,255,1);
+  height: 5px;
+  top: 30px
+}
+:global(.burgerTransition) {
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+:global(.burger1.menu-on){
+  top: 65vh;
+  background: rgba(255,255,255,0)
+}
+:global(.burger4.menu-on){
+  top: 55vh;
+  background: rgba(255,255,255,0)
+}
+:global(.burger3.menu-on){
+  top: 45vh;
+  background: rgba(255,255,255,0)
+}
+:global(.burger2.menu-on){
+  top: 38vh;
+}
+:global(span.hideLink){
+  opacity: 0;
+  display: none;
+}
+:global(span.showLink){
+  opacity: 1
+}
+:global(.container-on){
+  height: 100%;
+  background-color: #231F20
+}
+/*===MEDIA QUERIES FROM https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ =======*/
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+  .logoContainer img{
+    border: 1px solid black
+  }
+}
+/* ================= MOBILE ================*/
+@media screen and (max-width: 740px){
+  .logoContainer img {
+    width: 25%;
+  }
+  .logoContainer {
+    margin-left: 22vw
+  }
+}

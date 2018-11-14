@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-columns:  50% 50%;
+  grid-template-rows: 1fr 1fr 1fr
+}
+.textContainer {
+  padding: 0px 0px 0px 40px;
+  grid-column: 1;
+  grid-row: 1/span 3
+}
+.text {
+  font-size: 30px;
+  line-height: 6vh;
+}
+.logo {
+  width: 50%;
+  margin: auto;
+  grid-column: 2;
+  grid-row: 1/span 2;
+}
+.button {
+  grid-column: 2;
+  grid-row: 3
+}
+/*===MEDIA QUERIES FROM https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ =======*/
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+  .text {
+    font-size: 1.5rem
+  }
+}
+/* ================= MOBILE ================*/
+@media screen and (max-width: 740px){
+  .container {
+    flex-direction: column;
+    height: unset;
+  }
+  .grid{
+    grid-template-rows: 20vh 60vh 20vh;
+    grid-template-columns: 100%
+  }
+  .logo{
+    grid-column: 1;
+    grid-row: 1;
+    height: 100%;
+  }
+  .text {
+    font-size: 21px;
+    line-height: 5.5vh;
+  }
+  .textContainer {
+    width: 85%;
+    padding: 0;
+    grid-row: 2;
+    margin: auto;
+  }
+  .button {
+    grid-column: 1;
+    grid-row: 3
+  }
+}

@@ -1,0 +1,92 @@
+.mainHeader {
+    grid-column: 1/span2;
+    text-align: center;
+    margin: 2% 0 5% 0 
+}
+.mainHeader h1 {
+    font-size: 48px;
+}
+.mainHeader p {
+    font-size: 48px;
+    line-height: 50px;
+    margin: 2% 0 0 0 
+}
+.header {
+    font-size: 36px;
+    letter-spacing: 1.3px;
+    margin: auto;
+}
+.aligner {
+    display: flex
+}
+.flex {
+    display: flex;
+    margin: auto;
+    width: 75%;
+}
+.parentFlex {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 90%;
+}
+.title {
+    position: relative;
+    font-size: 2.6rem;
+    height: 40vh;
+    width: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+.copy {
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 10px
+}
+.thinking {
+    background-image: url('../../assets/images/thinking.png');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    width: 50%
+}
+.making {
+    background-image: url('../../assets/images/making.png');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    width: 50%
+}
+.thinkingContainer, .makingContainer {
+    overflow-y: scroll;
+    width: 50%
+}
+.thinkingContainer {
+    padding-bottom: 20%
+}
+/*===MEDIA QUERIES FROM https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ =======*/
+/* ================= TABLET ================*/
+@media screen and (width: 741px){
+    .container{
+        border: 1px
+    }
+  }
+  /* ================= MOBILE ================*/
+  @media screen and (max-width: 740px){
+    .flex{
+        flex-wrap: wrap
+    }
+    .mainHeader {
+        margin-top: 30%;
+    }
+    .mainHeader p {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .thinkingContainer, .makingContainer{
+        width: 100%;
+    }
+    .flex {
+        width: 100%;
+    }
+  }
+  
