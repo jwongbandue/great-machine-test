@@ -3,7 +3,7 @@ import * as Section from './components/index.js'
 import ReactFullPage from './components/Fullpage/fullpage-component'
 import './components/styles/App.css'
 import 'fullpage.js/vendors/scrolloverflow'
-
+// test
 const FullpageWrapper = fullpageProps => (
   <ReactFullPage
   {...fullpageProps}
